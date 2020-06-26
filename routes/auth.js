@@ -17,7 +17,7 @@ router.get('/signup', guestAccess, getUserStatus, (req, res) => {
 })
 
 router.post('/signup', async (req, res) => {
-  const { password } = req.body
+  const { password } = req.body;
 
   if (!password || password.length < 8 || !password.match(/^[A-Za-z0-9]+$/)) {
     return res.render('registerPage', {
